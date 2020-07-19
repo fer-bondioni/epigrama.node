@@ -1,0 +1,212 @@
+.top h2{
+    display: inline-block;
+    padding-left: 10px;
+    /* position: relative; */
+}
+.icon-menu{
+    font-size: 22px;
+    display: inline-block;
+    cursor:pointer;
+}
+.top{
+    margin-top: 2em;
+}
+.ebook{
+    float: left;
+    width: 178px;
+    height: 178px;
+    background-color: #575759;
+}
+.ebook > p{
+    margin-left: 52px;
+    margin-top: 74px;
+    font-size: 24px;
+    color: white;
+}
+.info{
+    float: left;
+    margin-left: 25px;
+    width: 30%;
+}
+.info h5{
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    text-transform: uppercase;
+}
+.info span{
+    padding-bottom: 200px !important;
+    font-size: .9em;
+}
+
+/* narrativas hispánicas box */
+
+.nar{
+    float: left;
+    width: 178px;
+    height: 178px;
+    background-color: #D4D4D4;
+    font-family: 'Merienda', cursive !important;
+}
+.nar p{
+    margin-left: 42px;
+    margin-top: 64px;
+    font-size: 22px;
+    color: black;
+}
+.info3{
+    float: left;
+    margin-left: 25px;
+    width: 30%;
+}
+.info3 h5{
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    text-transform: uppercase;
+}
+.info3 span{
+    padding-bottom: 200px !important;
+    font-size: .9em;
+}
+
+/* fin narrativas hispánicas box */
+
+
+.menu-months{
+    display: none;
+    margin-top: 22px;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.menu-months ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: auto;
+    cursor: default !important;
+}
+.menu-months ul li{
+    padding: .7em 4em .1em 1.6em;
+}
+.menu-months ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+    display: block;
+    transition: all 0.1s ease;
+    text-align: left;
+}
+.menu-months ul li a:hover{
+    opacity: 0.5;
+}
+
+/* .icon-menu:hover > .menu-months{
+    display: block;
+} */
+.cat{
+    display: block;
+    margin-top: -15px;
+    margin-left: 36px;
+}
+
+.dwn-pdf{
+    display: inline-block;
+    background-color: black;
+    width: 20%;
+    text-align: center;
+    margin-left: 612px;
+    font-size: 0.8em;
+    padding: .2em .8em;
+}
+.dwn-pdf a{
+    text-decoration: none;
+    color: white;
+}
+
+.row2{
+    overflow: hidden;
+}
+
+.ebook1{
+    grid-area: ebook1;
+    margin-right: 20px;
+}
+.ebook2{
+    grid-area: ebook2;
+    margin-right: 20px;
+}
+.ebook3{
+    grid-area: ebook3;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "ebook1 ebook2 ebook3";
+    grid-column-gap: 30px;
+}
+.imgbook, .description{
+    float: left;
+    box-sizing: border-box;
+}
+.imgbook{
+    width: 40%;
+    margin-top: 24px;
+}
+.description{
+    width: 60%;
+}
+.imgbook img{
+    width: 90px;
+}
+.description .title{
+    line-height: 30px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+.description a{
+    color: black;
+    text-decoration: none;
+}
+.description a:hover{
+    text-decoration: underline;
+} 
+.description .autor{
+    font-size: 14px;
+}
+.text{
+    font-size: 14px;
+    padding-right: 2px;
+}
+.index{
+    width: 165px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+}
+.index ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.index ul li{
+    float: left;
+    margin-right: 10px;
+}
+.index ul li.rounded{
+    margin-top:-.3px;
+}
+.index ul li a{
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+.rounded{
+    background-color: black;
+    border-radius: 50%;
+    color: white !important;
+    padding: 1px 4px;
+    font-weight: bold;
+}

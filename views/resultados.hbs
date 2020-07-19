@@ -1,0 +1,58 @@
+<head>
+    <link rel="stylesheet" href="stylesheets/noticias.css">
+</head>
+<main class="holder">
+
+
+    <section class="row2 top">
+        <h1 style="text-align: center;">Noticias</h1>
+        <div class="parent">
+            {{#each resultados.noticias}}
+            <div class="child">
+                <p>
+                    <span class="date">{{fecha}}</span>
+                    <br>
+                    <a class="title" href="/noticias/{{id}}">
+                        {{titulo}}
+                    </a>
+                    <br>
+                    <a class="category" href="/categoria">{{categoria}}</a>
+                </p>
+                <div>
+                    <span class="texto truncate">{{contenido}}</span>
+                </div>
+                <p style="margin:5px 0 0; padding: 0">
+                    <a class="texto" href="/noticias/{{id}}">Seguir leyendo</a>
+                </p>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    {{#if is_search}}
+    {{#unless resultados.noticias.length}}
+    No se encontraron resultados para <strong>{{q}}</strong>
+    {{/unless}}
+    {{/if}}
+
+    <section class="row2">
+        <h1 style="text-align: center;">Novedades</h1>
+        <div class="parent">
+            {{#each resultados.novedades}}
+            <div class="child2">
+                <p class="truncate">{{ texto }}</p>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    {{#if is_search}}
+    {{#unless resultados.novedades.length}}
+    No se encontraron novedades para <strong>{{q}}</strong>
+    {{/unless}}
+    {{/if}}
+
+
+</main>
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/jQuery.succinct.min.js"></script>

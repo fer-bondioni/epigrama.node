@@ -1,0 +1,71 @@
+.top h2{
+    display: inline-block;
+    /* padding-left: 10px; */
+    /* position: relative; */
+}
+.top{
+    margin-top: 2em;
+}
+.top2{
+    margin-top: 2.5em;
+}
+.lista{
+    display: inline-block;
+    margin-left: 170px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.lista ul{
+    list-style: none;
+    padding-top: 3.7px;
+    margin: 0;
+}
+.txt{
+    float: left;
+    padding-right: 4px;
+    font-size: 1.05em;
+    font-weight: 100;
+}
+
+.lista ul li{
+    float: left;
+    margin-left: 0.2em;
+}
+.lista a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.row2{
+    overflow:hidden;
+}
+.autor{
+    float:left;
+    box-sizing: border-box;
+    width: 13.8%;
+    margin-left: 3.442%;
+}
+.nombre a, .circle a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.autor:first-child{
+    margin-left: 0;
+}
+.circle img{
+    width: 120px;
+    border-radius: 50%;
+    height: 120px;
+    /* margin-bottom: 10px; */
+}
+.nombre{
+    padding-left: 16px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 10px;
+}

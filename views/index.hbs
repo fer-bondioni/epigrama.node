@@ -1,0 +1,282 @@
+<head>
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <style>
+        .limit {
+            width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<main class="holder">
+    <!-- <div class="shadow"></div> -->
+
+    <!-- galería principal -->
+
+    <div class="primary-gallery js-flickity" data-flickity-options='{ "autoPlay": 2800, "draggable": false, "wrapAround": true, "selectedAttraction": 0.018,
+        "friction": 0.28}'>
+        <div class="gallery-cell color1">
+            <a href="/novedades">
+                <div class="tapa">
+                    <img src="images/libro-nov.webp" alt="libro" width="170">
+                </div>
+                <div class="datos">
+                    <div class="title">
+                        <h2>Slavoj Žižek</h2>
+                    </div>
+                    <div class="extra">
+                        <h1>Pandemia</h1>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nostrum quis magni
+                            odit reiciendis dicta quod tempore atque enim qui molestiae quas nam voluptate accusantium
+                            fugiat, asperiores error. Incidunt, repellat.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="gallery-cell color2">
+            <a href="/novedades">
+                <div class="tapa">
+                    <img src="images/loscombatientes.webp" alt="libro" width="170">
+                </div>
+                <div class="datos color3">
+                    <div class="title">
+                        <h2>Cristina Morales</h2>
+                    </div>
+                    <div class="extra">
+                        <h1 style="font-style: italic;">Los combatientes</h1>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nostrum quis magni
+                            odit reiciendis dicta quod tempore atque enim qui molestiae quas nam voluptate accusantium
+                            fugiat, asperiores error. Incidunt, repellat.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="gallery-cell color4">
+            <a href="/agenda">
+                <div class="tapa">
+                    <img src="images/agend2.jpeg" alt="evento" width="170">
+                </div>
+                <div class="datos" style="background-color:#E5E1D8;">
+                    <div class="title">
+                        <h2>Juan Tallón</h2>
+                    </div>
+                    <div class="extra">
+                        <!-- <h1>Rewind</h1> -->
+                        <h2>Encuentro virtual</h2>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nostrum quis magni
+                            odit reiciendis dicta quod tempore atque enim qui molestiae quas nam voluptate accusantium
+                            fugiat, asperiores error. Incidunt, repellat.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="gallery-cell color5">
+            <a href="/agenda">
+                <div class="tapa">
+                    <img src="images/agend.webp" alt="evento" width="170">
+                </div>
+                <div class="datos" style="background-color: #FFFFFF;">
+                    <div class="title">
+                        <h2>Eloy <br> Fernández Porta</h2>
+                    </div>
+                    <div class="extra">
+                        <!-- <h1 style="font-style: italic;">L’art de fer-ne <br> un gra massa</h1> -->
+                        <h2>Presentación virtual</h2>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nostrum quis magni
+                            odit reiciendis dicta quod. Incidunt, repellat.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    <section class="novedades">
+        <h4>Novedades</h4>
+        {{#each novedades}}
+        <div class="novedades-texto">
+            <p>{{texto}}</p>
+            {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloremque nemo nam illum vel
+                inventore, aliquid debitis quisquam sapiente similique dignissimos illo laboriosam. Eius architecto odio
+                deleniti impedit labore voluptate!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloremque nemo nam illum vel
+                inventore, aliquid debitis quisquam sapiente similique dignissimos illo laboriosam. Eius architecto odio
+                deleniti impedit labore voluptate!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloremque nemo nam illum vel
+                inventore, aliquid debitis quisquam sapiente similique dignissimos illo laboriosam. Eius architecto odio
+                deleniti impedit labore voluptate!</p> --}}
+
+            {{/each}}
+
+            <p class="center">
+                <a href="/novedades">Continuar</a>
+            </p>
+        </div>
+        <div class="novedades-gallery">
+            <div class="second-gallery js-flickity" data-flickity-options='{ "autoPlay": 2800, "draggable": false}'>
+                <div class="pop">
+                    <div class="img">
+                        <a href="/novedades">
+                            <img src="images/libro-nov.webp" width="150">
+                        </a>
+                    </div>
+                    <div class="more">
+                        <a href="#">
+                            <span class="author">Slavoj Zizek</span>
+                        </a>
+                        <a href="#">
+                            <span class="title2">Pandemia</span>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, saepe. Consequuntur,
+                            molestias voluptatum, eligendi itaque mollitia qui eius enim voluptate culpa quo nihil eum
+                            esse harum aperiam corporis sapiente ab?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, saepe.
+                        </p>
+                    </div>
+                </div>
+                <div class="pop">
+                    <div class="img">
+                        <a href="/novedades">
+                            <img src="images/loscombatientes.webp" width="150">
+                        </a>
+                    </div>
+                    <div class="more">
+                        <a href="autores/autor.html">
+                            <span class="author">Cristina Morales</span>
+                        </a>
+                        <a href="nuevos/book.html">
+                            <span class="title2">Los combatientes</span>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, saepe. Consequuntur,
+                            molestias voluptatum, eligendi itaque mollitia qui eius enim voluptate culpa quo nihil eum
+                            esse harum aperiam corporis sapiente ab?</p>
+                    </div>
+                </div>
+                <div class="pop">
+                    <div class="img">
+                        <a href="/novedades">
+                            <img src="images/libro-nov.webp" width="150">
+                        </a>
+                    </div>
+                    <div class="more">
+                        <a href="#">
+                            <span class="author">Slavoj Zizek</span>
+                        </a>
+                        <a href="nuevos/book.html">
+                            <span class="title2">Pandemia</span>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, saepe. Consequuntur,
+                            molestias voluptatum, eligendi itaque mollitia qui eius enim voluptate culpa quo nihil eum
+                            esse harum aperiam corporis sapiente ab?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, saepe.
+                        </p>
+                    </div>
+                </div>
+                <div class="pop">
+                    <div class="img">
+                        <a href="/novedades">
+                            <img src="images/loscombatientes.webp" width="150">
+                        </a>
+                    </div>
+                    <div class="more">
+                        <a href="autores/autor.html">
+                            <span class="author">Cristina Morales</span>
+                        </a>
+                        <a href="nuevos/book.html">
+                            <span class="title2">Los combatientes</span>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, saepe. Consequuntur,
+                            molestias voluptatum, eligendi itaque mollitia qui eius enim voluptate culpa quo nihil eum
+                            esse harum aperiam corporis sapiente ab?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row2">
+        <div class="agenda">
+            <div class="agenda-todo">
+                <p>AGENDA -</p>
+                <a href="/agenda">Ver todo</a>
+            </div>
+            <div class="month">
+                <ul>
+                    <!-- <li class="prev">&#10094;</li>
+                      <li class="next">&#10095;</li> -->
+                    <li>
+                        Mayo<br>
+                        <span style="font-size:12px">2020</span>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="weekdays">
+                <li>Lu</li>
+                <li>Ma</li>
+                <li>Mi</li>
+                <li>Ju</li>
+                <li>Vi</li>
+                <li>Sa</li>
+                <li>Su</li>
+            </ul>
+
+            <ul class="days">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li><a style="text-decoration:none;" href="/agenda"><span class="active">20</span></a>
+                </li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+            </ul>
+            <!-- <div class="next">
+                      <h4>Próximo evento</h4>
+                      <h2></h2>
+                  </div> -->
+        </div>
+        <div class="noticias">
+            <div class="agenda-todo">
+                <p>NOTICIAS -</p>
+                <a href="/noticias">Ver todo</a>
+            </div>
+            {{#each noticias}}
+            <div class="noti-home">
+                <a href="/noticias">
+                    <div class="tip1">
+                        <span class="date">{{fecha}}</span> <br>
+                        <h4>{{titulo}}</h4>
+                    </div>
+                    <p class="limit">{{contenido}}</p>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+</main>
+<script src="javascripts/flickity.pkgd.min.js"></script>
+<script src="javascripts/scripts.js"></script>

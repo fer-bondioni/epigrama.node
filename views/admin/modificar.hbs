@@ -1,0 +1,29 @@
+<div class="container" style="margin: 50px auto;">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4 style="text-align:center; margin-bottom:20px;">Modificar la noticia</h4>
+            <form method="post" action="/admin/noticias/modificar">
+                <input type="hidden" value="{{noticia.id}}" name="id">
+                <div class="form-group">
+                    <input type="text" name="titulo" class="form-control" placeholder="Título"
+                        value="{{noticia.titulo}}">
+                </div>
+                <div class="form-group">
+                    <textarea name="categoria" rows="1" class="form-control" placeholder="Categoría">{{noticia.categoria}}</textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="contenido" rows="5" class="form-control" placeholder="Contenido">{{noticia.contenido}}</textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="fecha"  class="form-control" placeholder="Fecha" value="{{noticia.fecha}}">
+                </div>
+                <button type="submit" class="btn btn-dark offset-5">Modificar</button>
+            </form>
+            {{#if error}}
+            <h5 class="text-center"
+                style="background-color:red; margin-top: 10px; color:white; border-radius: 5px; font-size:16px; font-weight:bold; padding: 20px;">
+                {{mensaje}}</h5>
+            {{/if}}
+        </div>
+    </div>
+</div>

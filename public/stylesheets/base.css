@@ -1,0 +1,388 @@
+/* 
+font-family: 'Lobster Two', cursive;
+font-family: 'Lato', sans-serif;
+ */
+/* comienzo base */
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.holder{
+    width: 960px;
+    margin: 0 auto;
+}
+.holder .link-logo{
+  text-decoration: none;
+  color: black;
+}
+header{
+    background-color: white;
+}
+.social{
+    background-color: black;
+    padding: 1px 0 0;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.social ul{
+    margin-left: 60.2%;
+    position: absolute;
+    top: -1.2em;
+    list-style: none;
+}
+.social ul li{
+    float: left;
+}
+.social ul li a{
+    text-decoration: none;
+    color: white;
+    /* padding-right: .8em; */
+    line-height: 38px;
+    font-size: .8em;
+    font-weight: bold;
+    display: block;
+    padding: 0px 10px 20px 10px;
+}
+.social ul li a.back:hover{
+    background-color: white;
+    color: black; 
+}
+.active2{
+    background-color: white;
+    color: black !important;
+}
+header img{
+    width: 40px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1.2em;
+    transform: rotate(-180deg);
+    margin-top: 20px;
+}
+.sub{
+  margin-left: 416px;
+  margin-top: -15px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  border-top: 2px dashed black;
+  width: 128px;
+}
+.sub h2{
+  margin: 0;
+}
+/* .social{
+  position: sticky;
+  top:0;
+  z-index: 9999;
+  } */
+  
+nav{
+    line-height: 20px;
+    position: relative;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background:white;
+}
+
+.main-nav{
+    overflow: hidden;
+    box-shadow: 0 3px 2px -2px rgba(0,0,0,0.6);
+    /* position:relative; */
+}
+
+/* sub menu catalogo */
+
+.dropdown-content, .dropdown-content2{
+    display: none;
+    position: absolute;
+    /* background-color: #f9f9f9; */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 18px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-left: 20px;
+}
+.dropdown-content{
+  width: 500px;
+}
+.dropdown-content2{
+  width: 200px;
+}
+.dropdown-content .drop, .dropdown-content2 .drop{
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.dropdown:hover .dropdown-content, .dropdown:hover .dropdown-content2 {
+    display: block;
+}
+.sub-menu, .sub-menu2{
+  margin-top: 20px;
+  float: left;
+  width: 45%;
+}
+.sub-menu{
+  margin-right: 8%;
+}
+.sub-menu ul, .sub-menu2 ul, .sub-menu3 ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sub-menu ul li, .sub-menu2 ul li{
+  float: left;
+  width: 100%;
+}
+.sub-menu ul li a, 
+.sub-menu2 ul li a,
+.sub-menu3 ul li a
+{
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 5px 0;
+  padding: 1px 0;
+}
+.sub-menu ul li a:last-child,
+.sub-menu3 ul li a:last-child
+{
+  padding-bottom: 10px;
+}
+.sub-menu3{
+  margin-top: 20px;
+}
+.sub-menu3 ul li{
+  width: 100%;
+}
+
+/* comienzo nav */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li{
+    width: 12.45%;
+    float: left;
+    /* standard 14.25 */
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+    text-align: center;
+    padding: 0.4em 0.4em;
+    display: block;
+    transition: all 0.1s ease;
+}
+nav ul li a:hover{
+    /* border-top:2px solid black; */
+    opacity: 0.3;
+}
+
+.active{
+    border-top:2px solid black;
+}
+
+.first::before{
+    content: "\e900";
+    color: black;
+    font-family: 'icomoon';
+    position: absolute;
+    left: 12.6%;
+}
+.second::before{
+    content: "\e900";
+    color: black;
+    font-family: 'icomoon';
+    position: absolute;
+    left: 27.6%;
+}
+
+.footer{
+    clear: both;
+    border-top: 1px solid black;
+    /* padding: 3m 0; */
+    margin-top: 4em;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding-top: 1.5em;
+}
+
+.footer ul li{
+    list-style: none;
+}
+
+.footer1, .nav-footer1, .nav-footer2{
+    float: left;
+    box-sizing: border-box;
+}
+
+.footer1{
+    font-size: 0.6em;
+    width: 30%;
+    margin-top: -5px;
+}
+
+.nav-footer1{
+    width: 40%;
+    margin-top: -17px;
+    padding-left: 40px;
+}
+
+.nav-footer1 ul{
+    list-style:none;
+}
+.nav-footer1 ul li{
+  float: left;
+  width: 30%;
+}
+
+.nav-footer1 ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+    /* display: block; */
+    line-height: 1.8em;
+}
+.nav-footer2{
+    width: 30%;
+    margin-top: -10px;
+    padding-left: 120px;
+}
+
+.nav-footer2 ul li{
+    display: inline-block;
+    padding-left: 0.85em;
+}
+
+.nav-footer2 ul li a{
+    text-decoration: none;
+    color: black !important;
+}
+
+/* boton up */
+html { scroll-behavior: smooth; }
+
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 40px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: silver; 
+  color: white; 
+  cursor: pointer; 
+  padding-top: 10px; 
+  border-radius: 10px;
+  font-size: 22px; 
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* comienzo redes sociales */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ljl1a6');
+    src:  url('../fonts/icomoon.eot?ljl1a6#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ljl1a6') format('truetype'),
+      url('../fonts/icomoon.woff?ljl1a6') format('woff'),
+      url('../fonts/icomoon.svg?ljl1a6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+.icon-facebook2:before, .icon-twitter:before, .icon-instagram:before, .icon-whatsapp:before
+{
+    font-family: 'icomoon';
+    color: white;
+}
+.icon-facebook:before, .icon-twitter2:before, .icon-instagram2:before, .icon-whatsapp2:before
+, .icon-menu:before {
+    font-family: 'icomoon';
+    color: black;
+}
+
+.icon-menu:before {
+    content: "\e9bd";
+}
+.icon-home:before {
+    content: "\e900";
+    font-family: 'icomoon';
+    color: black;
+  }
+  .icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-facebook:before {
+    content: "\ea91";
+  }
+  .icon-instagram2:before {
+    content: "\ea92";
+  }
+  .icon-whatsapp2:before {
+    content: "\ea93";
+  }
+  .icon-twitter2:before {
+    content: "\ea96";
+  }
+
+  .icon-location2:before {
+    content: "\e948";
+  }
+  .icon-calendar:before {
+    content: "\e953";
+  }
+  .icon-search:before {
+    content: "\e986";
+  }
+
+  .icon-circle-right:before {
+    content: "\ea42";
+    font-family: 'icomoon';
+    color: black;
+  }
+  .icon-circle-left:before {
+    content: "\ea44";
+    font-family: 'icomoon';
+    color: black;
+  }
+  .icon-ctrl:before {
+    content: "\ea50";
+    font-family: 'icomoon';
+    color: black;
+  }
+
+/* fin redes sociales */
+
+
+/* fin base */
+

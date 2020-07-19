@@ -1,0 +1,19 @@
+<div class="container" style="margin: 50px auto;">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <form method="post" action="/admin/novedades/agregar2">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Mes" name="mes">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" name="texto" placeholder="Texto"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark offset-5">Agregar</button>
+            </form>
+            {{#if error}}
+            <h5 class="text-center" style="background-color:red; margin-top: 10px; color:white; border-radius: 5px; font-size:16px; font-weight:bold; padding: 20px;">
+                {{mensaje}}</h5>
+            {{/if}}
+        </div>
+    </div>
+</div>

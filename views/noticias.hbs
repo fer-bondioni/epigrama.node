@@ -1,0 +1,143 @@
+<head>
+    <link rel="stylesheet" href="stylesheets/noticias.css">
+    <style>
+        .text {
+            display: inline-block;
+            width: 278px;
+            height: 80px;
+            overflow: hidden;
+            white-space: wrap;
+            text-overflow: ellipsis;
+            line-height: 1.45em !important;
+        }
+
+        .dots:after {
+            content: "...";
+        }
+    </style>
+</head>
+<main class="holder">
+    <section class="row top">
+        <div class="icon-menu" onclick="myFunction()">
+            <div class="menu-months" id="myLinks">
+                <ul>
+                    <li><a href="">Todas</a></li>
+                    <li><a href="">General</a></li>
+                    <li><a href="">Premios y distinciones</a></li>
+                    <li><a href="">Debates</a></li>
+                    <li><a href="">Diálogos</a></li>
+                </ul>
+            </div>
+        </div>
+        <h2>Noticias</h2>
+        {{!-- <form style="display: inline; margin-left:600px;" action="/noticias" method="get">
+            <input type="search" placeholder="Search" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </form> --}}
+    </section>
+
+    <section class="row2 top">
+        <div class="parent">
+            {{#each noticias.pepe}}
+            <div class="child">
+                <p>
+                    <span class="date">{{fecha}}</span>
+                    <br>
+                    <a class="title" href="/noticias/{{id}}">
+                        {{titulo}}
+                    </a>
+                    <br>
+                    <a class="category" href="/noticias/{{categoria}}">{{categoria}}</a>
+                </p>
+                <div>
+                    <span class="texto truncate">{{contenido}}</span>
+                </div>
+                <p style="margin:5px 0 0; padding: 0">
+                    <a class="texto" href="/noticias/{{id}}">Seguir leyendo</a>
+                </p>
+            </div>
+            {{/each}}
+        </div>
+
+
+    </section>
+
+    {{#if is_search}}
+    {{#unless noticias.length}}
+    No se encontraron resultados para <strong>{{q}}</strong>
+    {{/unless}}
+    {{/if}}
+
+
+    <section class="row2 top">
+        <div class="index">
+            <ul>
+                <li class="rounded">1</li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">7</a></li>
+                <li><a href="">8</a></li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/jQuery.succinct.min.js"></script>
+
+{{!-- 
+intento con display grid
+<section class="row2 top">
+        {{#each noticias}}
+
+        <div class="container">
+            <div class="book">
+                <p>
+                    <span class="date">{{fecha}}</span>
+                    <br>
+                    <a class="title" href="noticias/noticia.html">
+                        {{titulo}}
+                    </a>
+                    <br>
+                    <a class="category" href="noticias/noticia.html">{{categoria}}</a>
+                </p>
+                <div>
+                    <span class="texto text">{{contenido}}</span>
+                </div>
+                <p>
+                    <a class="texto" href="noticias/noticia.html">Seguir leyendo</a>
+                </p>
+            </div>
+        </div>
+        {{/each}}
+
+    </section> --}}
+
+{{!-- 
+        intento con versión original
+    <section class="row2 top">
+        {{#each noticias}}
+        <div class="noticias">
+            <p>
+                <span class="date">{{fecha}}</span>
+                <br>
+                <a class="title" href="noticias/noticia.html">
+                    {{titulo}}
+                </a>
+                <br>
+                <a class="category" href="noticias/noticia.html">{{categoria}}</a>
+            </p>
+            <div>
+                <span class="texto text">{{contenido}}</span>
+            </div>
+            <p>
+                <a class="texto" href="noticias/noticia.html">Seguir leyendo</a>
+            </p>
+        </div>
+        {{/each}}
+
+    </section> --}}

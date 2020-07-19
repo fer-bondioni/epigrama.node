@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <span style="display: inline-block; margin-bottom: 10px;">
+                <a href="/admin/novedades" class="btn btn-success">
+                    Editar Novedades</a>
+            </span>
+        </div>
+        <div class="col-9">
+            <p class="text-right">
+                Hola, <span style="text-transform: capitalize; margin-right: 10px;">{{usuario}}</span> <a
+                    href="/admin/login" class="btn btn-sm btn-danger">Cerrá sesión
+                    <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h3 style="display: inline-block;">Lista de noticias</h3> <br>
+        </div>
+        <div class="col-3 text-right">
+            <p>
+                <a href="/admin/noticias/agregar" class="btn btn-success">
+                    <i class="fa fa-plus" aria-hidden="true"></i> Nuevo
+                </a>
+            </p>
+        </div>
+        <div class="col-3">
+            <form class="form-inline my-2 my-lg-0" action="/admin/noticias" method="get">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"
+                    {{#if q}} value="{{q}}" {{/if}}>
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search"
+                        aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </div>
+
+    {{!-- table --}}
+
+    <div class="row">
+        <div class="col">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col-1">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Categoría</th>
+                        {{!-- <th scope="col-2">Contenido</th> --}}
+                        <th scope="col">Fecha</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each noticias}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{titulo}}</td>
+                        <td>{{categoria}}</td>
+                        {{!-- <td>{{contenido}}</td> --}}
+                        <td>{{fecha}}</td>
+                        <td class="text-center">
+                            <a href="/admin/noticias/modificar/{{id}}" class="btn btn-secondary btn-sm">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </a>
+                            <a href="/admin/noticias/eliminar/{{id}}" class="btn btn-secondary btn-sm">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{#if is_search}}
+            {{#unless noticias.length}}
+            No se encontraron resultados para <strong>{{q}}</strong>
+            {{/unless}}
+            {{/if}}
+        </div>
+    </div>
+
+
+</div>

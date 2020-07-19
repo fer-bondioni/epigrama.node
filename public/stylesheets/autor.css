@@ -1,0 +1,75 @@
+
+.row2{
+    overflow: hidden;
+}
+.top {
+    margin-top: 1em;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "img bio obras";
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.autor{
+    grid-area: img;
+}
+.bio{
+    grid-area: bio;
+    margin-right: 25px;
+    margin-top: 45px;
+}
+.bio a{
+    text-decoration: none;
+    color: black;
+}
+.obras{
+    grid-area: obras;
+    margin-top: 45px;
+}
+.biopic img{
+    width: 300px;
+}
+.red{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.bottom{
+    margin-bottom: 8px;
+}
+.book p{
+    margin-bottom: 8px;
+}
+.obras h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.obras a{
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    font-weight: 600;
+}
+.obras ul{
+    padding: 0;
+    margin: 0 0 0 20px;
+    list-style-type: square;
+    line-height: 30px;
+}
+.text{
+    font-size: 15px;
+    /* padding-right: 2px; */
+    font-weight: bold;
+    text-align: left;
+}
+.text2{
+    font-size: 15px;
+    line-height: 24px;
+}
+
+
+
+
+

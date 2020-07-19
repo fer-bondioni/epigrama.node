@@ -1,0 +1,115 @@
+.top h2{
+    display: inline-block;
+    /* padding-left: 10px; */
+    /* position: relative; */
+}
+
+.top{
+    margin-top: 2.5em;
+}
+
+.row2{
+    overflow: hidden;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "book ref autor";
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 3fr 2.2fr;
+}
+
+.book{
+    grid-area: book;
+}
+.referencias{
+    grid-area: ref;
+    margin-right: 20px;
+}
+.autor{
+    grid-area: autor;
+    margin-top: 20px;
+}
+.imgbook{
+    margin-top: 18px;
+}
+.imgbook img{
+    width: 300px;
+}
+.red{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.bottom a{
+    text-decoration: none; 
+;}
+.bottom {
+    margin-bottom: 8px;
+}
+.book p{
+    margin-bottom: 8px;
+}
+
+.description h2{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+.description a{
+    color: black;
+    text-decoration: none;
+}
+.description a:hover{
+    text-decoration: underline;
+} 
+.description .autor{
+    font-size: 14px;
+}
+.text{
+    font-size: 15px;
+    /* padding-right: 2px; */
+    font-weight: bold;
+    line-height: 24px;
+    text-align: left;
+}
+.text2{
+    font-size: 15px;
+    line-height: 24px;
+}
+.quote{
+    font-size: 14px; 
+    font-style: italic;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.imgautor img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.description2 a{
+    text-decoration: none;
+    color: black;
+}
+.description2 h2{
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+.autor h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+}
+.otras ul{
+    padding: 0;
+    line-height: 30px;
+    margin: 10px 0 0 20px;
+    list-style-type: square;
+    font-style: italic;
+    font-weight: bold;
+}
+
+

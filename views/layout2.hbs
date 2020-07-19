@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epigrama</title>
+    {{!-- <link rel="stylesheet" href="stylesheets/bootstrap.min2.css"> --}}
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/flickity.css">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Lobster+Two:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <div class="social">
+            <ul>
+                <li><a class="back {{#if IsEditorial}} active2 {{/if}}" href="/editorial">LA EDITORIAL</a></li>
+                <li><a class="back {{#if IsContacto}} active2 {{/if}}" href="/contacto">CONTACTO</a></li>
+                <li><a class="icon-facebook2" href="#"></a></li>
+                <li><a class="icon-twitter" href="#"></a></li>
+                <li><a class="icon-instagram" href="#"></a></li>
+                <li><a class="icon-whatsapp" href="#"></a></li>
+            </ul>
+        </div>
+        <div class="holder">
+            <a class="link-logo" href="/">
+                <img src="/images/Logoanagrama.png" alt="epigrama">
+                <div class="sub">
+                    <h2>Epigrama</h2>
+                </div>
+            </a>
+        </div>
+    </header>
+    <nav>
+        <div class="holder">
+            <div class="main-nav">
+                <ul>
+                    <li><a href="/" class="{{#if IsHome}} active first {{/if}}" href="index.html">Inicio</a></li>
+                    <li><a href="/novedades" class="{{#if IsNovedades}} active {{/if}}">Novedades</a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn{{#if IsCatalogo}} active {{/if}} " href="/catalogo">Catálogo</a>
+                        <div class="dropdown-content">
+                            <h2 style="margin-top: 40px; margin-bottom: 0;">Catálogo</h2>
+                            <div class="sub-menu">
+                                <a class="drop" href="/catalogo">
+                                    <span class="icon-menu"
+                                        style="cursor: default;font-size: 12px; line-height: 20px;"></span>
+                                    <span style="font-weight: bold;">Colecciones</span></a>
+                                <ul>
+                                    <li><a href="/catalogo">Panorama Narrativas</a></li>
+                                    <li><a href="/catalogo">Narrativas Hispánicas</a></li>
+                                    <li><a href="/catalogo">Argumentos</a></li>
+                                    <li><a href="/catalogo">Contraseñas</a></li>
+                                    <li><a href="/catalogo">Panorama Narrativas</a></li>
+                                    <li><a href="/catalogo">Narrativas Hispánicas</a></li>
+                                    <li><a href="/catalogo">Argumentos</a></li>
+                                    <li><a href="/catalogo">Contraseñas</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-menu2">
+                                <a style="font-weight: bold;" class="drop" href="">Boletines</a>
+                                <ul>
+                                    <li><a style="margin-top: 6.5px;"
+                                            href="../files/el-atlas-de-la-educacion.pdf">Boletín de novedades</a></li>
+                                </ul>
+                                <a style="margin-top: 14px;" class="drop"
+                                    href="../coleccion/ebooks.html"><strong>E-books</strong></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="{{#if IsAutores}} active {{/if}}" href="/autores">Autores</a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn active" href="/noticias">Noticias</a>
+                        <div class="dropdown-content2">
+                            <h2 style="margin-top: 40px; margin-bottom: 0;">Noticias</h2>
+                            <div class="sub-menu3">
+                                <!-- <a class="drop" href="noticias.html">
+                                    <span style="font-weight: bold;">Noticias</span></a> -->
+                                <ul>
+                                    <li><a href="/noticias">Todas</a></li>
+                                    <li><a href="/noticias">General</a></li>
+                                    <li><a href="/noticias">Premios y distinciones</a></li>
+                                    <li><a href="/noticias">Debates</a></li>
+                                    <li><a href="/noticias">Diálogos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="{{#if IsAgenda}} active {{/if}}" href="/agenda">Agenda</a></li>
+                    <!-- <li><a href="editorial.html">La Editorial</a></li> -->
+                    <!-- <li><a href="contacto.html">Contacto</a></li> -->
+                    <li><a href="/admin/login">Log-in <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                    <li>
+                        <form action="/resultados" method="get">
+                            <input style="width: 80px; margin-top:5px" type="search" placeholder="Search"
+                                aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="icon-ctrl" onclick="topFunction()" id="myBtn" title="Ir arriba"></button>
+
+    </nav>
+    {{{body}}}
+    <footer class="holder">
+        <div class="footer">
+            <div class="footer1">
+                <p>© 2020 Editorial Epigrama.</p>
+                <p>Editor y director: Lorenzo Lorenzo</p>
+                <p>Diseño: Fernando Bondioni</p>
+            </div>
+            <div class="nav-footer1">
+                <ul>
+                    <li><a href="/novedades">Novedades</a></li>
+                    <li><a href="/catalogo">Catálogo</a></li>
+                    <li><a href="/autores">Autores</a></li>
+                    <li><a href="/agenda">Agenda</a></li>
+                    <li><a href="/editorial">La Editorial</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="nav-footer2">
+                <ul>
+                    <li><a class="icon-facebook" href="#"></a></li>
+                    <li><a class="icon-twitter2" href="#"></a></li>
+                    <li><a class="icon-instagram2" href="#"></a></li>
+                    <li><a class="icon-whatsapp2" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/javascripts/scripts.js"></script>
+
+</body>
+
+</html>

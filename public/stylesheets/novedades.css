@@ -1,0 +1,131 @@
+/* comienzo novedades */
+
+.top h2{
+    display: inline-block;
+    padding-left: 10px;
+    /* position: relative; */
+}
+.icon-menu{
+    font-size: 22px;
+    display: inline-block;
+    cursor:pointer;
+}
+.top{
+    margin-top: 2em;
+}
+.menu-months{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.menu-months ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: auto;
+    cursor: default !important;
+}
+.menu-months ul li{
+    padding: .7em 4em .2em 1.6em;
+}
+.menu-months ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+    display: block;
+    transition: all 0.1s ease;
+    text-align: left;
+}
+.menu-months ul li a:hover{
+    opacity: 0.5;
+}
+
+/* .icon-menu:hover > .menu-months{
+    display: block;
+} */
+
+.dwn-pdf{
+    display: inline-block;
+    background-color: black;
+    width: 20%;
+    text-align: center;
+    margin-left: 589px;
+    font-size: 0.8em;
+    padding: .2em .8em;
+}
+.dwn-pdf a{
+    text-decoration: none;
+    color: white;
+}
+
+.row2{
+    overflow: hidden;
+}
+/* .top{
+    margin-top: 2.5em;
+} */
+
+
+.text, .imgtext{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+.text{
+    padding-right: 22px;
+    margin-right: 120px;
+}
+.text p{
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.row2 h3{
+    font-weight: lighter;
+}
+
+.imgtxt{
+    padding-top: 5px;
+}
+
+.img, .txt{
+    float: left;
+    box-sizing: border-box;
+}
+.img{
+    width: 10%;
+    margin-right: 15px;
+}
+.txt{
+    width: 20%;
+}
+.txt a{
+    text-decoration: none;
+    color: black;
+}
+.título{
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+}
+.autor{
+    font-size: 14px;
+}
+.autor:hover, .título:hover{
+    text-decoration: underline;
+}
+.reseña{
+    line-height: 17px;
+    font-size: 14px;
+    padding-top: 14px;
+} 
+.img img{
+    width: 90px;
+}
+
+/* fin novedades */

@@ -1,0 +1,39 @@
+.top h2{
+    display: inline-block;
+    /* padding-left: 10px; */
+    /* position: relative; */
+}
+.top{
+    margin-top: 2em;
+}
+.content p{
+    font-size: 14px;
+    line-height: 24px;
+}
+.content h2{
+    font-weight: normal;
+}
+.left{
+    grid-area: contenido1;
+    margin-right: 50px;
+}
+.right{
+    grid-area: contenido2;
+}
+.right p, .left p{
+    padding: 0 0 0 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "contenido1 contenido2";
+    grid-gap: 20px;
+    /* grid-template-columns: 50% 50%; */
+}
+.capital{
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.left img, .right img{
+    width: 100%;
+}
