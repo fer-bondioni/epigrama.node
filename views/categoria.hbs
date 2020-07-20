@@ -1,50 +1,46 @@
 <head>
-    <link rel="stylesheet" href="/stylesheets/noticias.css">
+    <link rel="stylesheet" href="/stylesheets/noticia.css">
 </head>
 <main class="holder">
+    pepe
 
-    {{!-- <section class="row2 top">
-        <div class="parent">
-            {{#each noticia}}
-            <div class="child">
-                <p>
-                    <span class="date">{{categoria.fecha}}</span>
-                    <br>
-                    <a class="title" href="/noticias/{{id}}">
-                        {{categoria}}
-                    </a>
-                    <br>
-                    <a class="category" href="/noticias/{{categoria}}">{{categoria}}</a>
-                </p>
-                <div>
-                    <span class="texto truncate">{{contenido}}</span>
-                </div>
-                <p style="margin:5px 0 0; padding: 0">
-                    <a class="texto" href="/noticias/{{id}}">Seguir leyendo</a>
-                </p>
-            </div>
-            {{/each}}
+    {{#each categoria.debates}}
+    <div class="child">
+        <p>
+            <span class="date">{{fecha}}</span>
+            <br>
+            <a class="title" href="/noticias/{{id}}">
+                {{titulo}}
+            </a>
+            <br>
+            <a class="category" href="/noticias/{{categoria}}">{{categoria}}</a>
+        </p>
+        <div>
+            <span class="texto truncate">{{contenido}}</span>
         </div>
+        <p style="margin:5px 0 0; padding: 0">
+            <a class="texto" href="/noticias/{{id}}">Seguir leyendo</a>
+        </p>
+    </div>
+    {{/each}}
 
-
-    </section> --}}
-                {{#each noticias}}
-            <div class="child">
-                <p>
-                    <span class="date">{{fecha}}</span>
-                    <br>
-                    <a class="title" href="/noticias/{{id}}">
-                        {{titulo}}
-                    </a>
-                    <br>
-                    <a class="category" href="/noticias/{{categoria}}">{{categoria}}</a>
-                </p>
-                <div>
-                    <span class="texto truncate">{{contenido}}</span>
-                </div>
-                <p style="margin:5px 0 0; padding: 0">
-                    <a class="texto" href="/noticias/{{id}}">Seguir leyendo</a>
-                </p>
-            </div>
-            {{/each}}
+    {{#each categoria.dialogos}}
+    <div class="child">
+        <p>
+            <span class="date">{{fecha}}</span>
+            <br>
+            <a class="title" href="/noticias/{{id}}">
+                {{titulo}}
+            </a>
+            <br>
+            <a class="category" href="/noticias/{{categoria}}">{{categoria}}</a>
+        </p>
+        <div>
+            <span class="texto truncate">{{contenido}}</span>
+        </div>
+        <p style="margin:5px 0 0; padding: 0">
+            <a class="texto" href="/noticias/{{id}}">Seguir leyendo</a>
+        </p>
+    </div>
+    {{/each}}
 </main>

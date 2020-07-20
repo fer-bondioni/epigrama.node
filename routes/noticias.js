@@ -19,6 +19,7 @@ router.get('/', async function (req, res, next) {
   });
 });
 
+
 router.get('/:id', async (req, res, next) => {
   var id = req.params.id;
   var noticia = await noticiasModel.getNoticiasById(id);
@@ -29,13 +30,14 @@ router.get('/:id', async (req, res, next) => {
 }); 
 
 router.get('/:categoria', async (req, res, next) => {
-  var categoria = req.params.categoria;
-  var noticia = await noticiasModel.getNoticiasByCategoria(categoria);
+  var categoria = await noticiasModel.getNoticiasByCategoria();
   res.render('categoria', {
     layout:'layout2',
-    noticia
+    categoria
   });
 }); 
+
+
 
 
 module.exports = router;

@@ -5,14 +5,13 @@ async function getNoticias() {
     return rows;
 }
 async function getNoticias2() {
-    var queryPrimera = "select * from noticias where id > 13 and id < 23 order by id DESC";
+    var queryPrimera = "select * from noticias where id > 12 and id < 23 order by id DESC";
     var querySegunda = "select * from noticias where id > 22 order by id DESC";
     return {
         pepe : await pool.query(queryPrimera),
         pepeDos : await pool.query(querySegunda)
     }
 }
-
 
 
 async function insertNoticia(obj) {
@@ -38,10 +37,15 @@ async function getNoticiasById(id){
     return rows[0];
 }
 
-async function getNoticiasBycategoria(categoria){
-    var query = "select * from noticias where categoria = ?";
-    var rows = await pool.query(query, [categoria]);
-    return rows;
+
+async function getNoticiasByCategoria(){
+    var queryDebates = "select * from noticias where categoria like 'Debates'";
+    var queryDialogos = "select * from noticias where categoria like 'Diálogos'";
+
+    return {
+        debates: await pool.query(queryDebates),
+        dialogos: await pool.query(queryDialogos)
+    };
 }
 
 async function modificarNoticiabyId(obj, id){
@@ -60,4 +64,5 @@ async function buscarNoticias(busqueda){
     return rows;
 }
 
-module.exports ={ getNoticias, getNoticias2, insertNoticia, deleteNoticiasById, getNoticiasById, modificarNoticiabyId, buscarNoticias, getNoticiasBycategoria }
+module.exports ={ getNoticias, getNoticias2, insertNoticia, deleteNoticiasById, getNoticiasById, modificarNoticiabyId, 
+    buscarNoticias, getNoticiasByCategoria }

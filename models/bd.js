@@ -3,7 +3,7 @@ var util = require ('util');
 
 var pool = mysql.createPool({
     connectionLimit:10,
-    // socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
+    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASS,

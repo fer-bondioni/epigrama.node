@@ -5,7 +5,7 @@
 
 
     <section class="row2 top">
-        <h1 style="text-align: center;">Noticias</h1>
+        <h1>Noticias</h1>
         <div class="parent">
             {{#each resultados.noticias}}
             <div class="child">
@@ -16,7 +16,7 @@
                         {{titulo}}
                     </a>
                     <br>
-                    <a class="category" href="/categoria">{{categoria}}</a>
+                    <a class="category" href="/categoria/">{{categoria}}</a>
                 </p>
                 <div>
                     <span class="texto truncate">{{contenido}}</span>
@@ -36,7 +36,7 @@
     {{/if}}
 
     <section class="row2">
-        <h1 style="text-align: center;">Novedades</h1>
+        <h1>Novedades</h1>
         <div class="parent">
             {{#each resultados.novedades}}
             <div class="child2">
