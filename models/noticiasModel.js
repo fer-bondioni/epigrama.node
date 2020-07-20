@@ -8,14 +8,13 @@ async function getNoticias() {
 
 
 async function getNoticias2() {
-    var queryPrimera = "select * from noticias where id > 12 and id < 30 order by id DESC";
-    var querySegunda = "select * from noticias where id > 30 order by id DESC";
+    var queryPrimera = "select * from noticias where id > 12 and id < 36 order by id DESC";
+    var querySegunda = "select * from noticias where id > 36 order by id DESC";
     return {
         pepe : await pool.query(queryPrimera),
         pepeDos : await pool.query(querySegunda)
     }
 }//en noticias front
-
 
 
 async function getNoticias3() {
