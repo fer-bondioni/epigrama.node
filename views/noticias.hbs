@@ -30,11 +30,6 @@
             </div>
         </div>
         <h2>Noticias</h2>
-        {{!-- <form style="display: inline; margin-left:600px;" action="/noticias" method="get">
-            <input type="search" placeholder="Search" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
-            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-        </form> --}}
     </section>
 
     <section class="row2 top">
@@ -89,55 +84,3 @@
 <script src="javascripts/jquery.min.js"></script>
 <script src="javascripts/jQuery.succinct.min.js"></script>
 
-{{!-- 
-intento con display grid
-<section class="row2 top">
-        {{#each noticias}}
-
-        <div class="container">
-            <div class="book">
-                <p>
-                    <span class="date">{{fecha}}</span>
-                    <br>
-                    <a class="title" href="noticias/noticia.html">
-                        {{titulo}}
-                    </a>
-                    <br>
-                    <a class="category" href="noticias/noticia.html">{{categoria}}</a>
-                </p>
-                <div>
-                    <span class="texto text">{{contenido}}</span>
-                </div>
-                <p>
-                    <a class="texto" href="noticias/noticia.html">Seguir leyendo</a>
-                </p>
-            </div>
-        </div>
-        {{/each}}
-
-    </section> --}}
-
-{{!-- 
-        intento con versión original
-    <section class="row2 top">
-        {{#each noticias}}
-        <div class="noticias">
-            <p>
-                <span class="date">{{fecha}}</span>
-                <br>
-                <a class="title" href="noticias/noticia.html">
-                    {{titulo}}
-                </a>
-                <br>
-                <a class="category" href="noticias/noticia.html">{{categoria}}</a>
-            </p>
-            <div>
-                <span class="texto text">{{contenido}}</span>
-            </div>
-            <p>
-                <a class="texto" href="noticias/noticia.html">Seguir leyendo</a>
-            </p>
-        </div>
-        {{/each}}
-
-    </section> --}}

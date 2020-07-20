@@ -1,17 +1,28 @@
 var pool = require('./bd');
+
 async function getNoticias() {
     var query = "select * from noticias order by id DESC limit 3";
     var rows = await pool.query(query);
     return rows;
-}
+}// en index
+
+
 async function getNoticias2() {
-    var queryPrimera = "select * from noticias where id > 12 and id < 23 order by id DESC";
-    var querySegunda = "select * from noticias where id > 22 order by id DESC";
+    var queryPrimera = "select * from noticias where id > 12 and id < 30 order by id DESC";
+    var querySegunda = "select * from noticias where id > 30 order by id DESC";
     return {
         pepe : await pool.query(queryPrimera),
         pepeDos : await pool.query(querySegunda)
     }
-}
+}//en noticias front
+
+
+
+async function getNoticias3() {
+    var query = "select * from noticias order by id DESC";
+    var rows = await pool.query(query);
+    return rows;
+}//admin
 
 
 async function insertNoticia(obj) {
@@ -64,5 +75,5 @@ async function buscarNoticias(busqueda){
     return rows;
 }
 
-module.exports ={ getNoticias, getNoticias2, insertNoticia, deleteNoticiasById, getNoticiasById, modificarNoticiabyId, 
+module.exports ={ getNoticias, getNoticias2, getNoticias3, insertNoticia, deleteNoticiasById, getNoticiasById, modificarNoticiabyId, 
     buscarNoticias, getNoticiasByCategoria }

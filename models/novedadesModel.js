@@ -4,26 +4,25 @@ async function getNovedades() {
     var query = "select * from novedades order by id DESC";
     var rows = await pool.query(query);
     return rows;
-}//busqueda admin
+}//admin
 
 async function getNovedades2() {
     var query = "select * from novedades order by id ASC limit 1";
     var rows = await pool.query(query);
     return rows;
-}//busqueda admin 
+}//front primera
 
 async function getNovedades3() {
     var query = "select * from novedades where id = 8";
     var rows = await pool.query(query);
     return rows;
-}
+}//front segunda
 
 async function getNovedades4() {
     var query = "select * from novedades where id = 9";
     var rows = await pool.query(query);
     return rows;
-}
-
+}//front tercera
 
 
 async function insertNovedad(obj) {

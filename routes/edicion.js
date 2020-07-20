@@ -7,7 +7,7 @@ var novedadesModel = require('../models/novedadesModel')
 router.get('/', async function (req, res, next) {
   var noticias
   if (req.query.q === undefined) {
-    noticias = await noticiasModel.getNoticias2();
+    noticias = await noticiasModel.getNoticias3();
   } else {
     noticias = await noticiasModel.buscarNoticias(req.query.q);
   }
