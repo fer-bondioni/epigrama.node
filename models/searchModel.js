@@ -10,8 +10,8 @@ var pool = require('./bd');
 // module.exports ={ buscarGlobal }
 
 async function buscarGlobal(busqueda){
-    var queryNoticias = "select titulo, contenido, categoria from noticias where titulo like ? or contenido like ? or categoria like ? or fecha like ?";
-    var queryNovedades = "select mes, texto from novedades where texto like ?";
+    var queryNoticias = "select id, titulo, contenido, categoria, fecha from noticias where titulo like ? or contenido like ? or categoria like ? or fecha like ?";
+    var queryNovedades = "select id, mes, texto from novedades where texto like ?";
 
     return {
         noticias: await pool.query(queryNoticias, ['%'+ busqueda + '%', '%'+ busqueda + '%', '%'+ busqueda + '%', '%'+ busqueda + '%', '%'+ busqueda + '%' ]),

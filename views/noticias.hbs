@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="stylesheets/noticias.css">
+    <link rel="stylesheet" href="/stylesheets/noticias.css">
     <style>
         .text {
             display: inline-block;
@@ -21,15 +21,18 @@
         <div class="icon-menu" onclick="myFunction()">
             <div class="menu-months" id="myLinks">
                 <ul>
-                    <li><a href="">Todas</a></li>
-                    <li><a href="">General</a></li>
-                    <li><a href="">Premios y distinciones</a></li>
-                    <li><a href="">Debates</a></li>
-                    <li><a href="">Diálogos</a></li>
+                    <li><a href="/noticias">Todas</a></li>
+                    <li><a href="/noticias/categoria/General">General</a></li>
+                    <li><a href="/noticias/categoria/Premios%20y%20distinciones">Premios y distinciones</a></li>
+                    <li><a href="/noticias/categoria/Debates">Debates</a></li>
+                    <li><a href="/noticias/categoria/Diálogos">Diálogos</a></li>
                 </ul>
             </div>
         </div>
         <h2>Noticias</h2>
+        {{#if IsCategoria}}
+        <p style="margin:-18px 0 0 36px; font-weight:400; font-size: 21px">{{ categoria }}</p>
+        {{/if}}
     </section>
 
     <section class="row2 top">
@@ -43,7 +46,7 @@
                         {{titulo}}
                     </a>
                     <br>
-                    <a class="category" href="/noticias/{{categoria}}">{{categoria}}</a>
+                    <a class="category" href="/noticias/categoria/{{categoria}}">{{categoria}}</a>
                 </p>
                 <div>
                     <span class="texto truncate">{{contenido}}</span>
@@ -81,6 +84,5 @@
     </section>
 
 </main>
-<script src="javascripts/jquery.min.js"></script>
-<script src="javascripts/jQuery.succinct.min.js"></script>
-
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/jQuery.succinct.min.js"></script>

@@ -16,7 +16,7 @@
                         {{titulo}}
                     </a>
                     <br>
-                    <a class="category" href="/categoria/">{{categoria}}</a>
+                    <a class="category" href="/noticias/categoria/{{categoria}}">{{categoria}}</a>
                 </p>
                 <div>
                     <span class="texto truncate">{{contenido}}</span>
@@ -40,7 +40,10 @@
         <div class="parent">
             {{#each resultados.novedades}}
             <div class="child2">
-                <p class="truncate">{{ texto }}</p>
+                <p style="margin: 0; padding: 0;" class="truncate">{{ texto }}</p>
+                <p style="margin:5px 0 0; padding: 0">
+                    <a class="texto" href="/novedades">Seguir leyendo</a>
+                </p>
             </div>
             {{/each}}
         </div>

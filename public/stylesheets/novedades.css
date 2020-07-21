@@ -79,7 +79,7 @@
     margin-right: 120px;
 }
 .text p{
-    font-size: 14px;
+    font-size: 15px;
     line-height: 24px;
     margin: 0;
 }
@@ -114,14 +114,14 @@
     font-size: 16px;
 }
 .autor{
-    font-size: 14px;
+    font-size: 15px;
 }
 .autor:hover, .título:hover{
     text-decoration: underline;
 }
 .reseña{
     line-height: 17px;
-    font-size: 14px;
+    font-size: 15px;
     padding-top: 14px;
 } 
 .img img{

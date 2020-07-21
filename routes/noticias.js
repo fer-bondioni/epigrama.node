@@ -22,22 +22,31 @@ router.get('/', async function (req, res, next) {
 
 router.get('/:id', async (req, res, next) => {
   var id = req.params.id;
-  var noticia = await noticiasModel.getNoticiasById(id);
+  var noticia = await noticiasModel.getNoticiaById(id);
   res.render('noticia', {
-    layout: 'layout2',
+    IsNoticias:true,
     noticia
   });
 }); 
 
-router.get('/:categoria', async (req, res, next) => {
-  var categoria = await noticiasModel.getNoticiasByCategoria();
-  res.render('categoria', {
-    layout:'layout2',
+// router.get('/:categoria', async (req, res, next) => {
+//   var categoria = await noticiasModel.getNoticiasByCategoria();
+//   res.render('categoria', {
+//     layout:'layout2',
+//     categoria
+//   });
+// }); 
+
+router.get('/categoria/:categoria', async (req, res, next) => {
+  var categoria = req.params.categoria;
+  var noticias = await noticiasModel.getNoticiasByCategoria(categoria);
+  res.render('noticias', {
+    IsNoticias:true,
+    noticias,
+    IsCategoria: true,
     categoria
   });
 }); 
-
-
 
 
 module.exports = router;

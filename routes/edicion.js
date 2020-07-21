@@ -54,7 +54,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
 
 router.get('/modificar/:id', async (req, res, next) => {
   var id = req.params.id;
-  var noticia = await noticiasModel.getNoticiasById(id);
+  var noticia = await noticiasModel.getNoticiaById(id);
   res.render('admin/modificar', {
     layout: 'admin/layout',
     noticia

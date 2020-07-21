@@ -199,7 +199,7 @@ nav ul li a:hover{
     color: black;
     font-family: 'icomoon';
     position: absolute;
-    left: 12.6%;
+    left: 12.1%;
 }
 .second::before{
     content: "\e900";
