@@ -184,8 +184,9 @@
 }
 
 .texto {
-    font-size: 14px;
+    font-size: 15px;
     color: black;
+    line-height: 1.42857143em;
 }
 
 .texto:hover {
